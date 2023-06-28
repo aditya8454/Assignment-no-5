@@ -1,0 +1,72 @@
+Q1, Create a vehicle class with an init method having instance variables as name_of_vehicle, max_speed and average_of_vehicle.
+
+class Vehicle:
+       def __init__(self,name_of_vehicle, max_speed, average_of_vehicle):
+          self.name_of_vehicle = name_of_vehicle
+           self.max_speed = max_speed
+            self.average_of_vehicle = average_of_vehicle
+    
+         def getdetails(self):
+                return self.name_of_vehicle , self.max_speed , self.average_of_vehicle
+
+
+car = Vehicle('bmw',12,3)
+car.getdetails()
+
+Q2. Create a child class car from the vehicle class created in Que 1, which will inherit the vehicle class. Create a method named seating_capacity which takes capacity as an argument and returns the name of the vehicle and its seating capacity.
+
+       class car(Vehicle):
+             def seating_capacity(self,capacity):
+               self.capacity = capacity
+                 return self.name_of_vehicle , self.capacity
+
+       c1 = car("land rover" , 1,2)
+       c1.seating_capacity(4)
+Q3. What is multiple inheritance? Write a python code to demonstrate multiple inheritance.
+
+  class company1:
+         comp ="google"
+       print("I am a googler")
+
+  class company2:
+      comp ="apple"
+       print("I am a apple employee")
+
+   class company(company1 ,company2):
+      name = "ze0us"
+      pass
+
+  c = company()
+Q4. What are getter and setter in python? Create a class and create a getter and a setter method in this class.
+
+ class Animal:
+
+    def __init__(self,bark):
+    self.bark = bark
+    
+    def get_name(self):
+     return self.bark
+    
+     def set_name(self,bark):
+       self.bark = bark
+    
+    
+  a = Animal("Dog")
+  a.set_name("bow bow !")
+ a.get_name()
+Q5.What is method overriding in python? Write a python code to demonstrate method overriding.
+
+   class Num:
+
+        def __init__(self,num1):
+          self.num1 = num1
+    
+       def __add__(self,num2):
+          self.num2 = num2
+    
+        def result(self):
+          return self.num1 + self.num2
+
+   n1 = Num(4 + 5 )
+
+  n1.result()
